@@ -1,0 +1,12 @@
+
+<h1><%= @tag.name.capitalize %></h1>
+
+<ul class="tags">
+    <% @tag.articles.each do |article| %>
+        <li>
+            <%= link_to article.title, article_path(article)%>
+        <li>
+    <% end %>
+</ul>
+
+<%=link_to "Search by Tags", tags_path %>
